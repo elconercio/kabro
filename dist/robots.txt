@@ -1,0 +1,4 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://elconercio.github.io/sitemap-index.xml
