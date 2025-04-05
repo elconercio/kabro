@@ -19,10 +19,7 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # with:
-          # path: . # El directorio raíz de tu proyecto Astro, si es necesario.
-          # node-version: 20 # Especifica la versión de Node (si es necesario).
-          # package-manager: pnpm@latest # El gestor de paquetes que deseas usar.
+        # No es necesario modificar nada aquí, ya que con esta acción se construye el proyecto
 
   deploy:
     needs: build
@@ -32,5 +29,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          branch: gh-pages  # Esta línea asegura que los archivos se suban a la rama `gh-pages`
-          folder: dist      # Asegúrate de que esta es la carpeta que contiene los archivos generados
+          branch: main   # Publicamos en la rama 'main'
+          folder: dist    # Especificamos que los archivos generados están en la carpeta 'dist'
