@@ -18,7 +18,7 @@ import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: YukinaConfig.site,
+  site: 'https://elconercio.github.io',
   base:'/kabro',
   integrations: [
     tailwind(),
