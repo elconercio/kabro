@@ -8,7 +8,7 @@ const YukinaConfig: Configuration = {
 
   description: "Demo Site",
 
-  site: "https://elconercio.github.io",
+  site: "https://elconercio.github.io/kabro/",
 
   locale: "en", // set for website language and date format
 
