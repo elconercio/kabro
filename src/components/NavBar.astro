@@ -332,7 +332,7 @@ const navCount = YukinaConfig.navigators.length;
 <script is:inline>
   // load pagefind
   async function loadPagefind() {
-    const pagefind = await import("/kabro/pagefind/pagefind.js");
+    const pagefind = await import("astro-pagefind");
     await pagefind.options({
       excerptLength: 20,
     });
