@@ -28,5 +28,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          branch: main  # Publicar en la rama 'main'
+          branch: gh-pages  # Publicar en la rama 'main'
           folder: dist   # Especificamos que los archivos generados están en la carpeta 'dist'
