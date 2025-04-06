@@ -329,16 +329,16 @@ const navCount = YukinaConfig.navigators.length;
   });
 </script>
 
-<script type="module" is:inline>
+<script is:inline>
+  // load pagefind
   async function loadPagefind() {
-    const isProd = import.meta?.env?.PROD ?? false;
-    const basePath = isProd ? '/kabro' : '';
-    const pagefind = await import(`${basePath}/pagefind/pagefind.js?url`);
-    await pagefind.options({ excerptLength: 20 });
+    const pagefind = await import("/kabro/pagefind/pagefind.js?url");
+    await pagefind.options({
+      excerptLength: 20,
+    });
     pagefind.init();
     window.pagefind = pagefind;
     pagefind.search("");
   }
   loadPagefind();
 </script>
-
