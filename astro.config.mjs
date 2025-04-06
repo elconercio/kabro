@@ -19,6 +19,7 @@ import pagefind from "astro-pagefind";
 // https://astro.build/config
 export default defineConfig({
   site: YukinaConfig.site,
+  base: process.env.NODE_ENV === 'production' ? '/kabro/' : '/',
   integrations: [
     tailwind(),
     svelte(),
@@ -52,5 +53,8 @@ export default defineConfig({
         },
       ],
     ],
+  },
+  build: {
+    minify: false, // Desactivar la minificación
   },
 });
