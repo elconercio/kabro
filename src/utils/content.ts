@@ -85,7 +85,7 @@ export async function GetArchives() {
     }
     archives.get(year)!.push({
       title: post.data.title,
-      id: `/posts/${IdToSlug(post.id)}`,
+      id: `/kabro/posts/${IdToSlug(post.id)}`,
       date: date,
       tags: post.data.tags,
     });
@@ -127,7 +127,7 @@ export async function GetTags() {
       }
       tags.get(tagSlug)!.posts.push({
         title: post.data.title,
-        id: `/posts/${IdToSlug(post.id)}`,
+        id: `/kabro/posts/${IdToSlug(post.id)}`,
         date: new Date(post.data.published),
         tags: post.data.tags,
       });
@@ -165,7 +165,7 @@ export async function GetCategories() {
     }
     categories.get(categorySlug)!.posts.push({
       title: post.data.title,
-      id: `/posts/${IdToSlug(post.id)}`,
+      id: `/kabro/posts/${IdToSlug(post.id)}`,
       date: new Date(post.data.published),
       tags: post.data.tags,
     });
