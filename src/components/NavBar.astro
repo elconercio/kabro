@@ -331,7 +331,8 @@ const navCount = YukinaConfig.navigators.length;
 
 <script type="module" is:inline>
   async function loadPagefind() {
-    const basePath = import.meta.env.PROD ? '/kabro' : '';
+    const isProd = import.meta?.env?.PROD ?? false;
+    const basePath = isProd ? '/kabro' : '';
     const pagefind = await import(`${basePath}/pagefind/pagefind.js?url`);
     await pagefind.options({ excerptLength: 20 });
     pagefind.init();
