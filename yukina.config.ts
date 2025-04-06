@@ -15,15 +15,15 @@ const YukinaConfig: Configuration = {
   navigators: [
     {
       nameKey: I18nKeys.nav_bar_home,
-      href: "/",
+      href: "/kabro",
     },
     {
       nameKey: I18nKeys.nav_bar_archive,
-      href: "/archive",
+      href: "/kabro/archive",
     },
     {
       nameKey: I18nKeys.nav_bar_about,
-      href: "/about",
+      href: "/kabro/about",
     },
     {
       nameKey: I18nKeys.nav_bar_github,
