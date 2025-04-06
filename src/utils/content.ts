@@ -121,7 +121,7 @@ export async function GetTags() {
       if (!tags.has(tagSlug)) {
         tags.set(tagSlug, {
           name: tag,
-          slug: `/tags/${tagSlug}`,
+          slug: `/kabro/tags/${tagSlug}`,
           posts: [],
         });
       }
