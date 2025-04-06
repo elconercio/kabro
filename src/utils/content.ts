@@ -127,7 +127,7 @@ export async function GetTags() {
       }
       tags.get(tagSlug)!.posts.push({
         title: post.data.title,
-        id: `/posts/${IdToSlug(post.id)}`,
+        id: `/kabro/posts/${IdToSlug(post.id)}`,
         date: new Date(post.data.published),
         tags: post.data.tags,
       });
