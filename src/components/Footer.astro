@@ -16,7 +16,7 @@ const tagKeys = [...tags.keys()];
   <!-- Owner info card -->
   <div class="rounded-3xl bg-[var(--card-color)] transition-all lg:hidden">
     <div class="flex flex-row md:flex-col md:pt-4">
-      <a href="/about" class="relative h-40 w-40 md:hidden">
+      <a href="/kabro/about" class="relative h-40 w-40 md:hidden">
         <img
           class="lozad absolute left-0 top-0 h-40 rounded-l-3xl"
           data-src={YukinaConfig.avatarUrl}
@@ -39,7 +39,7 @@ const tagKeys = [...tags.keys()];
       <div class="flex grow flex-col justify-center space-y-4 p-4">
         <div class="flex flex-col items-center">
           <a
-            href="/about"
+            href="/kabro/about"
             class="line-clamp-1 text-xl font-semibold text-[var(--text-color)]"
           >
             {YukinaConfig.username}
@@ -79,7 +79,7 @@ const tagKeys = [...tags.keys()];
           .slice(0, YukinaConfig.maxFooterCategoryChip)
           .map((category) => (
             <a
-              href={`/categories/${category}`}
+              href={`/kabro/categories/${category}`}
               class="category flex flex-row items-center justify-between rounded-lg px-2 py-1.5 transition-all hover:bg-[var(--primary-color-lighten)]"
             >
               <p class="line-clamp-1 text-[var(--text-color)] transition-all">
@@ -94,7 +94,7 @@ const tagKeys = [...tags.keys()];
       {
         categoryKeys.length > YukinaConfig.maxFooterCategoryChip && (
           <a
-            href={`/categories/${categoryKeys[YukinaConfig.maxFooterCategoryChip]}`}
+            href={`/kabro/categories/${categoryKeys[YukinaConfig.maxFooterCategoryChip]}`}
             class="category col-span-2 flex flex-row items-center justify-between rounded-lg px-2 py-1.5 transition-all hover:bg-[var(--primary-color-lighten)] md:col-span-3"
           >
             <p class="line-clamp-1 text-[var(--text-color)] transition-all">
@@ -114,7 +114,7 @@ const tagKeys = [...tags.keys()];
           </a>
           <div class="absolute bottom-0 flex h-11 w-full flex-row items-center justify-center bg-gradient-to-t from-[var(--card-color)] from-25% to-transparent backdrop-blur-sm">
             <a
-              href="/categories/"
+              href="/kabro/categories/"
               class="flex flex-row items-center space-x-1 text-[var(--primary-color)] transition-colors hover:brightness-75 dark:hover:brightness-125"
             >
             <span>{i18n(I18nKeys.side_bar_view_more)}</span>

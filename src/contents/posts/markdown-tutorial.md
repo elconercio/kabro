@@ -621,13 +621,13 @@ If you’re referring to a local resource on the same server, you can use relati
 
 Code:
 
-    See my [About](/about/) page for details.
+    See my [About](/kabro/about/) page for details.
 
 Preview:
 
 ---
 
-See my [About](/about/) page for details.
+See my [About](/kabro/about/) page for details.
 
 ---
 
