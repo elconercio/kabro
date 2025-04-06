@@ -121,13 +121,13 @@ export async function GetTags() {
       if (!tags.has(tagSlug)) {
         tags.set(tagSlug, {
           name: tag,
-          slug: `/kabro/tags/${tagSlug}`,
+          slug: `/tags/${tagSlug}`,
           posts: [],
         });
       }
       tags.get(tagSlug)!.posts.push({
         title: post.data.title,
-        id: `/kabro/posts/${IdToSlug(post.id)}`,
+        id: `/posts/${IdToSlug(post.id)}`,
         date: new Date(post.data.published),
         tags: post.data.tags,
       });
