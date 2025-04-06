@@ -5,6 +5,7 @@ import { i18n } from "../locales/translation";
 import { Icon } from "astro-icon/components";
 import SearchBar from "./SearchBar.svelte";
 import MobileSearchBar from "./MobileSearchBar.svelte";
+import "astro-pagefind";
 
 const navCount = YukinaConfig.navigators.length;
 ---
@@ -331,21 +332,14 @@ const navCount = YukinaConfig.navigators.length;
 <script is:inline>
   // load pagefind
   async function loadPagefind() {
-  try {
-    const pagefind = await import("astro-pagefind");
-
-    // Usar el módulo si se carga correctamente
+    const basePath = import.meta.env.PROD ? '/kabro' : '';
+    const pagefind = await import(`${basePath}/pagefind/pagefind.js?url`);
     await pagefind.options({
       excerptLength: 20,
     });
     pagefind.init();
     window.pagefind = pagefind;
     pagefind.search("");
-  } catch (error) {
-    console.error("Error al cargar astro-pagefind:", error);
   }
-}
-
-loadPagefind();
-
+  loadPagefind();
 </script>
