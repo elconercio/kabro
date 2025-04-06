@@ -23,10 +23,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages  # Define el entorno aquí
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          branch: gh-pages  # Publicar en la rama 'main'
+          branch: gh-pages  # Publicar en la rama 'gh-pages'
           folder: dist   # Especificamos que los archivos generados están en la carpeta 'dist'
